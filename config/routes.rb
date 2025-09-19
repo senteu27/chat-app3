@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "messages#index"
   get "up" => "rails/health#show", as: :rails_health_check
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
